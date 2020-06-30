@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{luacode}
+
+\title{Basic Lua integration with LuaTeX}
+\author{Peter Rowlett}
+\date{June 2020}
+
+\begin{document}
+
+\maketitle
+
+Some \LaTeX\ text.
+
+\begin{itemize}
+    \begin{luacode*}
+    for i=2,10 do
+        tex.print("\\item An equation generated using Lua: \\( x^{" .. i .. "} \\).")
+    end
+    \end{luacode*}
+\end{itemize}
+
+\end{document}
